@@ -1,0 +1,953 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		45C1132AC49E4115F909A8BA /* Pods_ArgentAssessmentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 434259CFE4CE05AFA3F38DAB /* Pods_ArgentAssessmentTests.framework */; };
+		BA09E06AE14DA5ACE6D8A096 /* Pods_ArgentAssessment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89BD1717D0EA338450E0A71C /* Pods_ArgentAssessment.framework */; };
+		CED1085923834539003B35E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED1085823834539003B35E3 /* AppDelegate.swift */; };
+		CED1085B23834539003B35E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED1085A23834539003B35E3 /* ViewController.swift */; };
+		CED1085E23834539003B35E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CED1085C23834539003B35E3 /* Main.storyboard */; };
+		CED108602383453A003B35E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CED1085F2383453A003B35E3 /* Assets.xcassets */; };
+		CED108632383453A003B35E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CED108612383453A003B35E3 /* LaunchScreen.storyboard */; };
+		CED1086E2383453A003B35E3 /* WalletViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED1086D2383453A003B35E3 /* WalletViewModelTests.swift */; };
+		CED108792383453A003B35E3 /* ArgentAssessmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED108782383453A003B35E3 /* ArgentAssessmentUITests.swift */; };
+		CED1088823834969003B35E3 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED1088723834969003B35E3 /* Coordinator.swift */; };
+		CED1088F23834B43003B35E3 /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED1088E23834B43003B35E3 /* WalletViewController.swift */; };
+		CED1089123834B69003B35E3 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED1089023834B69003B35E3 /* EventViewController.swift */; };
+		CED1089323836A09003B35E3 /* Transfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED1089223836A09003B35E3 /* Transfer.swift */; };
+		CED1089523836A6C003B35E3 /* TransferCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED1089423836A6C003B35E3 /* TransferCell.swift */; };
+		CED1089823836C42003B35E3 /* UITableViewCell+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED1089723836C42003B35E3 /* UITableViewCell+extensions.swift */; };
+		CED1089B23837335003B35E3 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED1089A23837335003B35E3 /* Configuration.swift */; };
+		CED1089D238377DC003B35E3 /* WalletService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED1089C238377DC003B35E3 /* WalletService.swift */; };
+		CED1089F23837CD7003B35E3 /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED1089E23837CD7003B35E3 /* EventViewModel.swift */; };
+		CED108A123837F62003B35E3 /* WalletViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED108A023837F62003B35E3 /* WalletViewModel.swift */; };
+		CED108A3238482E4003B35E3 /* AOKeyStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED108A2238482E4003B35E3 /* AOKeyStorage.swift */; };
+		CEF69EE92385F34900940F71 /* EventService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF69EE82385F34900940F71 /* EventService.swift */; };
+		CEF69EED23860DE800940F71 /* TransferToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF69EEC23860DE800940F71 /* TransferToken.swift */; };
+		CEF69EEF23860EA000940F71 /* EthereumAccount+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF69EEE23860EA000940F71 /* EthereumAccount+extensions.swift */; };
+		CEF69EF123861EFA00940F71 /* EthereumTransactionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF69EF023861EFA00940F71 /* EthereumTransactionData.swift */; };
+		CEF69EF423863BA300940F71 /* ServiceMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF69EF323863BA300940F71 /* ServiceMocks.swift */; };
+		CEF69EFA238647B500940F71 /* CoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF69EF9238647B500940F71 /* CoordinatorTests.swift */; };
+		CEF69EFC23864A1E00940F71 /* AOKeyStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF69EFB23864A1E00940F71 /* AOKeyStorageTests.swift */; };
+		CEF69F0023872C5C00940F71 /* ViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF69EFF23872C5C00940F71 /* ViewModelFactory.swift */; };
+		CEF69F0223872DB400940F71 /* WalletServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF69F0123872DB400940F71 /* WalletServiceTests.swift */; };
+		CEF69F04238730CC00940F71 /* FakeEthereumClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF69F03238730CC00940F71 /* FakeEthereumClient.swift */; };
+		CEF69F062387417900940F71 /* EthereumLogData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF69F052387417900940F71 /* EthereumLogData.swift */; };
+		CEF69F082387426600940F71 /* EventViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF69F072387426600940F71 /* EventViewModelTests.swift */; };
+		CEF69F0A23874A2D00940F71 /* EthereumClient+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF69F0923874A2D00940F71 /* EthereumClient+extensions.swift */; };
+		F150200F560FBABFE8E3AE0F /* Pods_ArgentAssessmentUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9EB6814C779E083599D5BB3 /* Pods_ArgentAssessmentUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CED1086A2383453A003B35E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CED1084D23834538003B35E3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CED1085423834538003B35E3;
+			remoteInfo = ArgentAssessment;
+		};
+		CED108752383453A003B35E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CED1084D23834538003B35E3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CED1085423834538003B35E3;
+			remoteInfo = ArgentAssessment;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0C6F79C90582D4B89F6DA198 /* Pods-ArgentAssessment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArgentAssessment.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ArgentAssessment/Pods-ArgentAssessment.debug.xcconfig"; sourceTree = "<group>"; };
+		434259CFE4CE05AFA3F38DAB /* Pods_ArgentAssessmentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArgentAssessmentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		89BD1717D0EA338450E0A71C /* Pods_ArgentAssessment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArgentAssessment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9EB6814C779E083599D5BB3 /* Pods_ArgentAssessmentUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArgentAssessmentUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CED1085523834538003B35E3 /* ArgentAssessment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArgentAssessment.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CED1085823834539003B35E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CED1085A23834539003B35E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CED1085D23834539003B35E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CED1085F2383453A003B35E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CED108622383453A003B35E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CED108642383453A003B35E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CED108692383453A003B35E3 /* ArgentAssessmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArgentAssessmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CED1086D2383453A003B35E3 /* WalletViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewModelTests.swift; sourceTree = "<group>"; };
+		CED1086F2383453A003B35E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CED108742383453A003B35E3 /* ArgentAssessmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArgentAssessmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CED108782383453A003B35E3 /* ArgentAssessmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgentAssessmentUITests.swift; sourceTree = "<group>"; };
+		CED1087A2383453A003B35E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CED1088723834969003B35E3 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		CED1088E23834B43003B35E3 /* WalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewController.swift; sourceTree = "<group>"; };
+		CED1089023834B69003B35E3 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
+		CED1089223836A09003B35E3 /* Transfer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transfer.swift; sourceTree = "<group>"; };
+		CED1089423836A6C003B35E3 /* TransferCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferCell.swift; sourceTree = "<group>"; };
+		CED1089723836C42003B35E3 /* UITableViewCell+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+extensions.swift"; sourceTree = "<group>"; };
+		CED1089A23837335003B35E3 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		CED1089C238377DC003B35E3 /* WalletService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletService.swift; sourceTree = "<group>"; };
+		CED1089E23837CD7003B35E3 /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
+		CED108A023837F62003B35E3 /* WalletViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewModel.swift; sourceTree = "<group>"; };
+		CED108A2238482E4003B35E3 /* AOKeyStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AOKeyStorage.swift; sourceTree = "<group>"; };
+		CEF69EE82385F34900940F71 /* EventService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventService.swift; sourceTree = "<group>"; };
+		CEF69EEC23860DE800940F71 /* TransferToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferToken.swift; sourceTree = "<group>"; };
+		CEF69EEE23860EA000940F71 /* EthereumAccount+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EthereumAccount+extensions.swift"; sourceTree = "<group>"; };
+		CEF69EF023861EFA00940F71 /* EthereumTransactionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EthereumTransactionData.swift; sourceTree = "<group>"; };
+		CEF69EF323863BA300940F71 /* ServiceMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceMocks.swift; sourceTree = "<group>"; };
+		CEF69EF9238647B500940F71 /* CoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorTests.swift; sourceTree = "<group>"; };
+		CEF69EFB23864A1E00940F71 /* AOKeyStorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AOKeyStorageTests.swift; sourceTree = "<group>"; };
+		CEF69EFF23872C5C00940F71 /* ViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelFactory.swift; sourceTree = "<group>"; };
+		CEF69F0123872DB400940F71 /* WalletServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletServiceTests.swift; sourceTree = "<group>"; };
+		CEF69F03238730CC00940F71 /* FakeEthereumClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeEthereumClient.swift; sourceTree = "<group>"; };
+		CEF69F052387417900940F71 /* EthereumLogData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EthereumLogData.swift; sourceTree = "<group>"; };
+		CEF69F072387426600940F71 /* EventViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModelTests.swift; sourceTree = "<group>"; };
+		CEF69F0923874A2D00940F71 /* EthereumClient+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EthereumClient+extensions.swift"; sourceTree = "<group>"; };
+		DC1C4D6B757CC91526B95968 /* Pods-ArgentAssessmentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArgentAssessmentTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ArgentAssessmentTests/Pods-ArgentAssessmentTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E1D6EAE2ED68A834FBDC07C6 /* Pods-ArgentAssessment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArgentAssessment.release.xcconfig"; path = "Pods/Target Support Files/Pods-ArgentAssessment/Pods-ArgentAssessment.release.xcconfig"; sourceTree = "<group>"; };
+		EF8FBCA066E88E2B17922335 /* Pods-ArgentAssessmentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArgentAssessmentTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ArgentAssessmentTests/Pods-ArgentAssessmentTests.release.xcconfig"; sourceTree = "<group>"; };
+		F786A668F04C91F0AE07A22E /* Pods-ArgentAssessmentUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArgentAssessmentUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ArgentAssessmentUITests/Pods-ArgentAssessmentUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FEBE55D7F4EAD8A36973276F /* Pods-ArgentAssessmentUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArgentAssessmentUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ArgentAssessmentUITests/Pods-ArgentAssessmentUITests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CED1085223834538003B35E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA09E06AE14DA5ACE6D8A096 /* Pods_ArgentAssessment.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CED108662383453A003B35E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45C1132AC49E4115F909A8BA /* Pods_ArgentAssessmentTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CED108712383453A003B35E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F150200F560FBABFE8E3AE0F /* Pods_ArgentAssessmentUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2361F12E787B02FAEE7B3CAE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				89BD1717D0EA338450E0A71C /* Pods_ArgentAssessment.framework */,
+				434259CFE4CE05AFA3F38DAB /* Pods_ArgentAssessmentTests.framework */,
+				C9EB6814C779E083599D5BB3 /* Pods_ArgentAssessmentUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		865B103C893B5CE6068FD9B9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0C6F79C90582D4B89F6DA198 /* Pods-ArgentAssessment.debug.xcconfig */,
+				E1D6EAE2ED68A834FBDC07C6 /* Pods-ArgentAssessment.release.xcconfig */,
+				DC1C4D6B757CC91526B95968 /* Pods-ArgentAssessmentTests.debug.xcconfig */,
+				EF8FBCA066E88E2B17922335 /* Pods-ArgentAssessmentTests.release.xcconfig */,
+				F786A668F04C91F0AE07A22E /* Pods-ArgentAssessmentUITests.debug.xcconfig */,
+				FEBE55D7F4EAD8A36973276F /* Pods-ArgentAssessmentUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CED1084C23834538003B35E3 = {
+			isa = PBXGroup;
+			children = (
+				CED1085723834539003B35E3 /* ArgentAssessment */,
+				CED1086C2383453A003B35E3 /* ArgentAssessmentTests */,
+				CED108772383453A003B35E3 /* ArgentAssessmentUITests */,
+				CED1085623834538003B35E3 /* Products */,
+				865B103C893B5CE6068FD9B9 /* Pods */,
+				2361F12E787B02FAEE7B3CAE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CED1085623834538003B35E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CED1085523834538003B35E3 /* ArgentAssessment.app */,
+				CED108692383453A003B35E3 /* ArgentAssessmentTests.xctest */,
+				CED108742383453A003B35E3 /* ArgentAssessmentUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CED1085723834539003B35E3 /* ArgentAssessment */ = {
+			isa = PBXGroup;
+			children = (
+				CED1089923837311003B35E3 /* Config */,
+				CED1089623836C20003B35E3 /* Utility */,
+				CED1088D238349AB003B35E3 /* Service */,
+				CED1088C238349A2003B35E3 /* View */,
+				CED1088B2383499A003B35E3 /* Model */,
+				CED1088923834986003B35E3 /* ViewModel */,
+				CED108862383495D003B35E3 /* Coordinator */,
+				CED1085823834539003B35E3 /* AppDelegate.swift */,
+				CED1085A23834539003B35E3 /* ViewController.swift */,
+				CED1085C23834539003B35E3 /* Main.storyboard */,
+				CED1085F2383453A003B35E3 /* Assets.xcassets */,
+				CED108612383453A003B35E3 /* LaunchScreen.storyboard */,
+				CED108642383453A003B35E3 /* Info.plist */,
+			);
+			path = ArgentAssessment;
+			sourceTree = "<group>";
+		};
+		CED1086C2383453A003B35E3 /* ArgentAssessmentTests */ = {
+			isa = PBXGroup;
+			children = (
+				CEF69EFD23864B7B00940F71 /* Service */,
+				CEF69EF82386479D00940F71 /* Coordinator */,
+				CEF69EF72386478800940F71 /* ViewModel */,
+				CEF69EF223863B8B00940F71 /* Mocks */,
+				CED1086F2383453A003B35E3 /* Info.plist */,
+			);
+			path = ArgentAssessmentTests;
+			sourceTree = "<group>";
+		};
+		CED108772383453A003B35E3 /* ArgentAssessmentUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CED108782383453A003B35E3 /* ArgentAssessmentUITests.swift */,
+				CED1087A2383453A003B35E3 /* Info.plist */,
+			);
+			path = ArgentAssessmentUITests;
+			sourceTree = "<group>";
+		};
+		CED108862383495D003B35E3 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				CEF69EFE23872C4C00940F71 /* Factory */,
+				CED1088723834969003B35E3 /* Coordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		CED1088923834986003B35E3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CED1089E23837CD7003B35E3 /* EventViewModel.swift */,
+				CED108A023837F62003B35E3 /* WalletViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CED1088B2383499A003B35E3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CED1089223836A09003B35E3 /* Transfer.swift */,
+				CEF69EF023861EFA00940F71 /* EthereumTransactionData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CED1088C238349A2003B35E3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CEF69EEA2385F92500940F71 /* Cell */,
+				CED1088E23834B43003B35E3 /* WalletViewController.swift */,
+				CED1089023834B69003B35E3 /* EventViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CED1088D238349AB003B35E3 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				CEF69EEB23860C5600940F71 /* ABIFunction */,
+				CED1089C238377DC003B35E3 /* WalletService.swift */,
+				CEF69EE82385F34900940F71 /* EventService.swift */,
+				CED108A2238482E4003B35E3 /* AOKeyStorage.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		CED1089623836C20003B35E3 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				CED1089723836C42003B35E3 /* UITableViewCell+extensions.swift */,
+				CEF69EEE23860EA000940F71 /* EthereumAccount+extensions.swift */,
+				CEF69F0923874A2D00940F71 /* EthereumClient+extensions.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		CED1089923837311003B35E3 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				CED1089A23837335003B35E3 /* Configuration.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		CEF69EEA2385F92500940F71 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CED1089423836A6C003B35E3 /* TransferCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		CEF69EEB23860C5600940F71 /* ABIFunction */ = {
+			isa = PBXGroup;
+			children = (
+				CEF69EEC23860DE800940F71 /* TransferToken.swift */,
+			);
+			path = ABIFunction;
+			sourceTree = "<group>";
+		};
+		CEF69EF223863B8B00940F71 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				CEF69EF323863BA300940F71 /* ServiceMocks.swift */,
+				CEF69F03238730CC00940F71 /* FakeEthereumClient.swift */,
+				CEF69F052387417900940F71 /* EthereumLogData.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		CEF69EF72386478800940F71 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CED1086D2383453A003B35E3 /* WalletViewModelTests.swift */,
+				CEF69F072387426600940F71 /* EventViewModelTests.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CEF69EF82386479D00940F71 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				CEF69EF9238647B500940F71 /* CoordinatorTests.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		CEF69EFD23864B7B00940F71 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				CEF69EFB23864A1E00940F71 /* AOKeyStorageTests.swift */,
+				CEF69F0123872DB400940F71 /* WalletServiceTests.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		CEF69EFE23872C4C00940F71 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				CEF69EFF23872C5C00940F71 /* ViewModelFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CED1085423834538003B35E3 /* ArgentAssessment */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CED1087D2383453A003B35E3 /* Build configuration list for PBXNativeTarget "ArgentAssessment" */;
+			buildPhases = (
+				EFFDA8DC00E3C7DABBEB6BF7 /* [CP] Check Pods Manifest.lock */,
+				CED1085123834538003B35E3 /* Sources */,
+				CED1085223834538003B35E3 /* Frameworks */,
+				CED1085323834538003B35E3 /* Resources */,
+				09030A945879BE92F8F6FEDD /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ArgentAssessment;
+			productName = ArgentAssessment;
+			productReference = CED1085523834538003B35E3 /* ArgentAssessment.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CED108682383453A003B35E3 /* ArgentAssessmentTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CED108802383453A003B35E3 /* Build configuration list for PBXNativeTarget "ArgentAssessmentTests" */;
+			buildPhases = (
+				1358F39186033CF5E7CCEC53 /* [CP] Check Pods Manifest.lock */,
+				CED108652383453A003B35E3 /* Sources */,
+				CED108662383453A003B35E3 /* Frameworks */,
+				CED108672383453A003B35E3 /* Resources */,
+				A8A42FA341965796CB45A157 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CED1086B2383453A003B35E3 /* PBXTargetDependency */,
+			);
+			name = ArgentAssessmentTests;
+			productName = ArgentAssessmentTests;
+			productReference = CED108692383453A003B35E3 /* ArgentAssessmentTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CED108732383453A003B35E3 /* ArgentAssessmentUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CED108832383453A003B35E3 /* Build configuration list for PBXNativeTarget "ArgentAssessmentUITests" */;
+			buildPhases = (
+				C46F46842F4618BC8F07FDE6 /* [CP] Check Pods Manifest.lock */,
+				CED108702383453A003B35E3 /* Sources */,
+				CED108712383453A003B35E3 /* Frameworks */,
+				CED108722383453A003B35E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CED108762383453A003B35E3 /* PBXTargetDependency */,
+			);
+			name = ArgentAssessmentUITests;
+			productName = ArgentAssessmentUITests;
+			productReference = CED108742383453A003B35E3 /* ArgentAssessmentUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CED1084D23834538003B35E3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = "Artur Osinski";
+				TargetAttributes = {
+					CED1085423834538003B35E3 = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					CED108682383453A003B35E3 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = CED1085423834538003B35E3;
+					};
+					CED108732383453A003B35E3 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = CED1085423834538003B35E3;
+					};
+				};
+			};
+			buildConfigurationList = CED1085023834538003B35E3 /* Build configuration list for PBXProject "ArgentAssessment" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CED1084C23834538003B35E3;
+			productRefGroup = CED1085623834538003B35E3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CED1085423834538003B35E3 /* ArgentAssessment */,
+				CED108682383453A003B35E3 /* ArgentAssessmentTests */,
+				CED108732383453A003B35E3 /* ArgentAssessmentUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CED1085323834538003B35E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CED108632383453A003B35E3 /* LaunchScreen.storyboard in Resources */,
+				CED108602383453A003B35E3 /* Assets.xcassets in Resources */,
+				CED1085E23834539003B35E3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CED108672383453A003B35E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CED108722383453A003B35E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		09030A945879BE92F8F6FEDD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ArgentAssessment/Pods-ArgentAssessment-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BigInt/BigInt.framework",
+				"${BUILT_PRODUCTS_DIR}/EasyPeasy/EasyPeasy.framework",
+				"${BUILT_PRODUCTS_DIR}/SipHash/SipHash.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
+				"${BUILT_PRODUCTS_DIR}/web3.swift/web3.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BigInt.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EasyPeasy.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SipHash.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/web3.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ArgentAssessment/Pods-ArgentAssessment-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1358F39186033CF5E7CCEC53 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ArgentAssessmentTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A8A42FA341965796CB45A157 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ArgentAssessmentTests/Pods-ArgentAssessmentTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ArgentAssessmentTests/Pods-ArgentAssessmentTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C46F46842F4618BC8F07FDE6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ArgentAssessmentUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EFFDA8DC00E3C7DABBEB6BF7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ArgentAssessment-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CED1085123834538003B35E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CED1089523836A6C003B35E3 /* TransferCell.swift in Sources */,
+				CED1089123834B69003B35E3 /* EventViewController.swift in Sources */,
+				CED1085B23834539003B35E3 /* ViewController.swift in Sources */,
+				CED1089B23837335003B35E3 /* Configuration.swift in Sources */,
+				CEF69EEF23860EA000940F71 /* EthereumAccount+extensions.swift in Sources */,
+				CEF69EF123861EFA00940F71 /* EthereumTransactionData.swift in Sources */,
+				CED1089F23837CD7003B35E3 /* EventViewModel.swift in Sources */,
+				CED1089323836A09003B35E3 /* Transfer.swift in Sources */,
+				CEF69EE92385F34900940F71 /* EventService.swift in Sources */,
+				CED1088F23834B43003B35E3 /* WalletViewController.swift in Sources */,
+				CED1088823834969003B35E3 /* Coordinator.swift in Sources */,
+				CED1089823836C42003B35E3 /* UITableViewCell+extensions.swift in Sources */,
+				CEF69F0A23874A2D00940F71 /* EthereumClient+extensions.swift in Sources */,
+				CED108A123837F62003B35E3 /* WalletViewModel.swift in Sources */,
+				CED1085923834539003B35E3 /* AppDelegate.swift in Sources */,
+				CED108A3238482E4003B35E3 /* AOKeyStorage.swift in Sources */,
+				CEF69F0023872C5C00940F71 /* ViewModelFactory.swift in Sources */,
+				CEF69EED23860DE800940F71 /* TransferToken.swift in Sources */,
+				CED1089D238377DC003B35E3 /* WalletService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CED108652383453A003B35E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEF69F062387417900940F71 /* EthereumLogData.swift in Sources */,
+				CED1086E2383453A003B35E3 /* WalletViewModelTests.swift in Sources */,
+				CEF69F0223872DB400940F71 /* WalletServiceTests.swift in Sources */,
+				CEF69F04238730CC00940F71 /* FakeEthereumClient.swift in Sources */,
+				CEF69EF423863BA300940F71 /* ServiceMocks.swift in Sources */,
+				CEF69F082387426600940F71 /* EventViewModelTests.swift in Sources */,
+				CEF69EFA238647B500940F71 /* CoordinatorTests.swift in Sources */,
+				CEF69EFC23864A1E00940F71 /* AOKeyStorageTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CED108702383453A003B35E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CED108792383453A003B35E3 /* ArgentAssessmentUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CED1086B2383453A003B35E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CED1085423834538003B35E3 /* ArgentAssessment */;
+			targetProxy = CED1086A2383453A003B35E3 /* PBXContainerItemProxy */;
+		};
+		CED108762383453A003B35E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CED1085423834538003B35E3 /* ArgentAssessment */;
+			targetProxy = CED108752383453A003B35E3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CED1085C23834539003B35E3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CED1085D23834539003B35E3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CED108612383453A003B35E3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CED108622383453A003B35E3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CED1087B2383453A003B35E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CED1087C2383453A003B35E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CED1087E2383453A003B35E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C6F79C90582D4B89F6DA198 /* Pods-ArgentAssessment.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7F452GGNJD;
+				INFOPLIST_FILE = ArgentAssessment/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = prime.ArgentAssessment;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CED1087F2383453A003B35E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1D6EAE2ED68A834FBDC07C6 /* Pods-ArgentAssessment.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7F452GGNJD;
+				INFOPLIST_FILE = ArgentAssessment/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = prime.ArgentAssessment;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CED108812383453A003B35E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC1C4D6B757CC91526B95968 /* Pods-ArgentAssessmentTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7F452GGNJD;
+				INFOPLIST_FILE = ArgentAssessmentTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = prime.ArgentAssessmentTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ArgentAssessment.app/ArgentAssessment";
+			};
+			name = Debug;
+		};
+		CED108822383453A003B35E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF8FBCA066E88E2B17922335 /* Pods-ArgentAssessmentTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7F452GGNJD;
+				INFOPLIST_FILE = ArgentAssessmentTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = prime.ArgentAssessmentTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ArgentAssessment.app/ArgentAssessment";
+			};
+			name = Release;
+		};
+		CED108842383453A003B35E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F786A668F04C91F0AE07A22E /* Pods-ArgentAssessmentUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7F452GGNJD;
+				INFOPLIST_FILE = ArgentAssessmentUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = prime.ArgentAssessmentUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ArgentAssessment;
+			};
+			name = Debug;
+		};
+		CED108852383453A003B35E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEBE55D7F4EAD8A36973276F /* Pods-ArgentAssessmentUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7F452GGNJD;
+				INFOPLIST_FILE = ArgentAssessmentUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = prime.ArgentAssessmentUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ArgentAssessment;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CED1085023834538003B35E3 /* Build configuration list for PBXProject "ArgentAssessment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CED1087B2383453A003B35E3 /* Debug */,
+				CED1087C2383453A003B35E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CED1087D2383453A003B35E3 /* Build configuration list for PBXNativeTarget "ArgentAssessment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CED1087E2383453A003B35E3 /* Debug */,
+				CED1087F2383453A003B35E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CED108802383453A003B35E3 /* Build configuration list for PBXNativeTarget "ArgentAssessmentTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CED108812383453A003B35E3 /* Debug */,
+				CED108822383453A003B35E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CED108832383453A003B35E3 /* Build configuration list for PBXNativeTarget "ArgentAssessmentUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CED108842383453A003B35E3 /* Debug */,
+				CED108852383453A003B35E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CED1084D23834538003B35E3 /* Project object */;
+}

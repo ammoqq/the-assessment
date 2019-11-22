@@ -1,0 +1,40 @@
+PODS:
+  - BigInt (3.1.0):
+    - SipHash (~> 1.2)
+  - EasyPeasy (1.9.0)
+  - Nimble (8.0.2)
+  - Quick (2.1.0)
+  - SipHash (1.2.2)
+  - SwiftKeychainWrapper (3.4.0)
+  - web3.swift (0.1.0):
+    - BigInt (~> 3.1.0)
+
+DEPENDENCIES:
+  - EasyPeasy
+  - Nimble
+  - Quick
+  - SwiftKeychainWrapper
+  - web3.swift
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - BigInt
+    - EasyPeasy
+    - Nimble
+    - Quick
+    - SipHash
+    - SwiftKeychainWrapper
+    - web3.swift
+
+SPEC CHECKSUMS:
+  BigInt: 76b5dfdfa3e2e478d4ffdf161aeede5502e2742f
+  EasyPeasy: 19a84ef8f8bbcf925b9fecc29d1d78b7dab96718
+  Nimble: 622629381bda1dd5678162f21f1368cec7cbba60
+  Quick: 4be43f6634acfa727dd106bdf3929ce125ffa79d
+  SipHash: fad90a4683e420c52ef28063063dbbce248ea6d4
+  SwiftKeychainWrapper: 6fc49fbf7d4a6b0772917acb0e53a1639f6078d6
+  web3.swift: d208adcfc6e5c9ea45c82a044e27a43a86d7e4ef
+
+PODFILE CHECKSUM: 43f76556a083e5647a4c568397798a2783617c5c
+
+COCOAPODS: 1.5.3
